@@ -1,0 +1,42 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="push">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+      </svg> Options</h2>
+    <ul>
+        <li><button mat-button (click)="showContent='tiffinprofile'">Profile</button></li>
+        <li><button mat-button (click)="showContent='updateProfile'">Edit Profile</button></li>
+        <li><button mat-button (click)="showContent='tiffinMenu'">My Menu</button></li>
+        <li><button mat-button (click)="showContent='tiffinPendingMenu'">Declained menu</button></li>
+        <li><button mat-button (click)="showContent='tiffinDeclainedMenu'">Pending menu</button></li>
+        <li><button mat-button (click)="showContent='orderHistory'">Order list</button></li>
+        <li><button mat-button (click)="showContent='currentOrders'">Current orders</button></li>
+        <li><button mat-button (click)="showContent='addMenu'">Add Menu</button></li>
+        <li><button mat-button (click)="showContent='feedback'">Feedbacks</button></li>
+        <li><button mat-button (click)="showContent='deregester'">Deregester</button></li>
+    </ul>
+    
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" class="toggleBtn" mat-button (click)="drawer.toggle()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+    </button>
+    <div *ngIf="showContent==='tiffinhome'">
+        <p>Home component</p>
+    </div>
+    <app-tiffinprofile *ngIf="showContent==='tiffinprofile'"></app-tiffinprofile>
+    <app-update-tiffin-provider *ngIf="showContent==='updateProfile'"></app-update-tiffin-provider>
+    <app-add-tiffin-menu *ngIf="showContent==='addMenu'"></app-add-tiffin-menu>
+    <app-deregester-tiffin-provider *ngIf="showContent==='deregester'"></app-deregester-tiffin-provider>
+    <app-tiffin-current-order *ngIf="showContent==='currentOrders'"></app-tiffin-current-order>
+    <app-tiffin-declained-menu *ngIf="showContent==='tiffinDeclainedMenu'"></app-tiffin-declained-menu>
+    <app-tiffin-feedback *ngIf="showContent==='feedback'"></app-tiffin-feedback>
+    <app-tiffin-menu *ngIf="showContent==='tiffinMenu'"></app-tiffin-menu>
+    <app-tiffin-order-history *ngIf="showContent==='orderHistory'"></app-tiffin-order-history>
+    <app-tiffin-pending-menu *ngIf="showContent==='tiffinPendingMenu'"></app-tiffin-pending-menu>
+    
+</div>
+</mat-drawer-container>

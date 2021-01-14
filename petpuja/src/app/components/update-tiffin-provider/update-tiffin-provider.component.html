@@ -1,0 +1,153 @@
+
+
+
+<div class="updateForm">
+    <form (ngSubmit)="onSubmit()" >
+
+        
+        
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Owner's name : </mat-label>
+              <input matInput  [formControl]="fullname" [(ngModel)]="tiffinProvider.tiffinProviderName" required>
+             
+          </mat-form-field>
+      </p>
+          <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email : </mat-label>
+            <input matInput  [formControl]="email" [(ngModel)]="tiffinProvider.tiffinProviderEmail" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Restaurant name : </mat-label>
+          <input matInput  [formControl]="restaurantName" [(ngModel)]="tiffinProvider.restaurantName" required>
+         
+      </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>House number : </mat-label>
+      <input matInput  [formControl]="houseNo" [(ngModel)]="tiffinProvider.houseNo" required>
+      
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Locality : </mat-label>
+      <input matInput  [formControl]="locality" [(ngModel)]="tiffinProvider.locality" required>
+     
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Street 1 : </mat-label>
+      <input matInput [formControl]="street1" [(ngModel)]="tiffinProvider.street1" required>
+      
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Street 2 : </mat-label>
+      <input matInput  [formControl]="street2" [(ngModel)]="tiffinProvider.street2" required>      
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>State name : </mat-label>
+      <input matInput  [formControl]="stateName" [(ngModel)]="tiffinProvider.stateName" required>
+    
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Country : </mat-label>
+      <input matInput   [formControl]="country" [(ngModel)]="tiffinProvider.country" required>
+     
+  </mat-form-field>
+</p>
+
+
+<button type="submit" mat-raised-button color="accent">Submit</button>
+  
+</form>
+</div>
+
+<!--
+
+
+
+<h2>Edit profile</h2>
+ 
+
+
+<div>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="name">Tiffin Provider Name :</label>
+            <input type="text" class="form-control" id="tiffinProviderName" required [(ngModel)]='tiffinProvider.tiffinProviderName' name="nm">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Tiffin Provider Email :</label>
+            <input type="email" class="form-control" id="tiffinProviderEmail" required [(ngModel)]="tiffinProvider.tiffinProviderEmail" name="email">
+        </div>
+        <div class="form-group">
+            <label for="name">Restrorant Name :</label>
+            <input type="text" class="form-control" id="restaurantName " required [(ngModel)]="tiffinProvider.restaurantName" name="rnm">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Username :</label>
+            <input type="text" class="form-control" id="tiffinProviderUsername" required [(ngModel)]="tiffinProvider.tiffinProviderUsername" name="unm">
+        </div>
+        <div class="form-group">
+            <label for="name">Password :</label>
+            <input type="text" class="form-control" id="tiffinProviderPassword" required [(ngModel)]="tiffinProvider.tiffinProviderPassword" name="pass">
+        </div>
+        <div class="form-group">
+            <label for="name">Restro Image :</label>
+            <input type="text" class="form-control" id="tiffinProviderImage" required [(ngModel)]="tiffinProvider.tiffinProviderImage" name="img">
+        </div>
+        <div class="form-group">
+            <label for="name">House No  :</label>
+            <input type="text" class="form-control" id="houseNo" required [(ngModel)]="tiffinProvider.houseNo" name="hno">
+        </div>
+    
+        <div class="form-group">
+            <label for="name">street1 :</label>
+            <input type="text" class="form-control" id="street1" required [(ngModel)]="tiffinProvider.street1" name="str1">
+        </div>
+        <div class="form-group">
+            <label for="name">street2 :</label>
+            <input type="text" class="form-control" id="street2" required [(ngModel)]="tiffinProvider.street2" name="str2">
+        </div>
+        <div class="form-group">
+            <label for="name">locality :</label>
+            <input type="text" class="form-control" id="locality" required [(ngModel)]="tiffinProvider.locality" name="lc">
+        </div>
+        <div class="form-group">
+            <label for="name">city :</label>
+            <input type="text" class="form-control" id="city" required [(ngModel)]="tiffinProvider.city" name="ct">
+        </div>
+        <div class="form-group">
+            <label for="name">zipcode :</label>
+            <input type="number" class="form-control" id="zipcode" required [(ngModel)]="tiffinProvider.zipcode" name="zip">
+        </div>
+        <div class="form-group">
+            <label for="name">state :</label>
+            <input type="text" class="form-control" id="state" required [(ngModel)]="tiffinProvider.stateName" name="st">
+        </div>
+        <div class="form-group">
+            <label for="name">country :</label>
+            <input type="text" class="form-control" id="tiffinProviderName" required [(ngModel)]="tiffinProvider.country" name="cut">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
+-->
